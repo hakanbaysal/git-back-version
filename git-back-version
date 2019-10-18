@@ -14,3 +14,4 @@ NEW_BRANCH=$(expr $LATEST_BRANCH + 1)
 echo "=== NEW BRANCH: $LATEST_RELEASE.$NEW_BRANCH ==="
 git -c core.quotepath=false flow hotfix start -F $LATEST_RELEASE.$NEW_BRANCH master
 git -c core.quotepath=false push --progress --porcelain origin refs/heads/hotfix/$LATEST_RELEASE.$NEW_BRANCH:hotfix/$LATEST_RELEASE.$NEW_BRANCH --set-upstream
+
